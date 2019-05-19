@@ -2,8 +2,10 @@
 Mock data for testing your LightDM theme in the browser
 */
 if (!('lightdm' in window)) {
+ 
   window.lightdm = {};
   lightdm.hostname = "test-host";
+  
   lightdm.languages = [{
       code: "en_US",
       name: "English(US)",
@@ -14,14 +16,18 @@ if (!('lightdm' in window)) {
       territory: "UK"
     }
   ];
+
   lightdm.default_language = lightdm.languages[0];
+  
   lightdm.layouts = [{
     name: "test",
     short_description: "test description",
     short_description: "really long epic description"
   }];
+  
   lightdm.default_layout = lightdm.layouts[0];
   lightdm.layout = lightdm.layouts[0];
+  
   lightdm.sessions = [{
       key: "key1",
       name: "session 1",
@@ -41,34 +47,37 @@ if (!('lightdm' in window)) {
   lightdm.can_restart = true;
   lightdm.can_shutdown = true;
 
-  lightdm.users = [{
-      name: "sexmachine",
-      real_name: "superman",
-      display_name: "Magic Wave",
-      image: "static/profile.png",
-      language: "en_US",
-      layout: null,
-      session: null,
-      logged_in: false
-    }, {
-      name: "brucew",
-      real_name: "Batman",
-      display_name: "Bruce Wayne",
-      image: "http://uk.omg.li/VDHr/OW-blog-Batman.jpg",
-      language: "en_US",
-      layout: null,
-      session: null,
-      logged_in: false
-    }, {
-      name: "peterp",
-      real_name: "Spiderman",
-      display_name: "Peter Parker",
-      image: "",
-      language: "en_US",
-      layout: null,
-      session: null,
-      logged_in: true
-    }
+  lightdm.users = [
+    {
+        name: "miles",
+        real_name:"Spiderman",
+        display_name: "Miles Morales",
+        image: "https://i.annihil.us/u/prod/marvel/i/mg/f/50/537bcfa1eed73/standard_xlarge.jpg",
+        language: "en_US",
+        layout: null,
+        session: null,
+        logged_in: true
+      },
+      {
+          name: "bart",
+          real_name: "Kid Flash",
+          display_name: "Bart Allen",
+          image: "https://orig00.deviantart.net/96ee/f/2012/160/7/0/kidflash_by_sii_sen-d52x9si.png",
+          language: "en_US",
+          layout: null,
+          session: null,
+          logged_in: false
+      },
+      {
+          name: "richard",
+          real_name: "Nightwing",
+          display_name: "Dick Grayson",
+          image: "https://a.wattpad.com/useravatar/nightwingsbutt420.128.559243.jpg",
+          language: "en_US",
+          layout: null,
+          session: null,
+          logged_in: false
+      },
   ];
 
   lightdm.num_users = lightdm.users.length;
