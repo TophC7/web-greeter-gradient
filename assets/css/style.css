@@ -13,18 +13,18 @@
 	100% { transform: translateX(0px); }
 }
 
-.gradient-anime {
- 	background: linear-gradient(270deg, #4bd3ff, #ff8585, #8598ff);
+.gradient {
+ 	background: linear-gradient(to left, #FF5555, #F1FA8C, #50FA7B);
 	background-size: 600% 100%;
 	animation: move-offset 30s ease-in-out infinite;
 }
 
-.shake-anime {
+.shake {
 	animation: shake .5s linear;
 }
 
 body {
-	font-family: 'WenQuanYi Micro Hei', sans-serif;
+	font-family: 'Product Sans', sans-serif;
 	position: relative;
 }
 
@@ -42,10 +42,11 @@ body {
 .form {
 	margin: 0;
 	padding: 0;
-	width: 300px;
+	width: 280px;
 	padding: 50px;
-	background-color: white;
+	background-color: #1E1F29;
 	border-radius: 25px;
+	box-shadow: 0 0 80px 10px rgba(0,0,0,0.3);
 }
 
 .container .avatar-img {
@@ -88,13 +89,14 @@ body {
 	text-align: center;
 	line-height: 37px;
 	color: white;
-	background-color: rgba(0, 0, 0, .2);
+	/* background-color: rgba(0, 0, 0, .2); */
+	background-color: #282A36;
 	border-radius: 5px;
 }
 
 .password {
 	font-size: 1rem;
-	border: solid #ff8585 2px;
+	border: solid #FF79C6 2px;
 	outline: none;
 	border-radius: 5px;
 	display: block;
@@ -102,7 +104,9 @@ body {
 	box-sizing: border-box;
 	text-align: center;
 	height: 37px;
-	color: rgba(0, 0, 0, .6);
+	color: #FF79C6;
+	background-color: #282A36;	
+	/* color: rgba(0, 0, 0, .6); */
 }
 
 .message {
@@ -115,7 +119,7 @@ body {
 
 .login {
 	font-size: 1.1rem;
-	margin-top: 25px;
+	margin-top: 50px;
 	display: block;
 	border: none;
 	outline: none;
@@ -123,8 +127,9 @@ body {
 	height: 37px;
 	width: 100%;
 	padding: 5px;
+	/* padding-top: 30px; */
 	border-radius: 5px;
-	color: white;
+	color: #1E1F29;
 	cursor: pointer;
 }
 
@@ -134,7 +139,7 @@ body {
 	width: 100%;
 	height: 37px;
 	text-align: center;
-	background: white;
+	background: #1E1F29;
 	box-sizing: border-box;
 	outline: none;
 	color: rgba(0, 0, 0, .6);
@@ -186,8 +191,19 @@ html, body {
 	border-radius: 50%;
 	padding: 10px;
 	box-sizing: border-box;
-	background: white;
+	background: #1E1F29;
 	margin-right: 30px;
 	display: inline-block;
 	cursor: pointer;
+	box-shadow: 0 0 20px 1px rgba(0,0,0,.3);
+}
+
+.filter-accent{ 
+	/* filter of #FF79C6 made with https://codepen.io/sosuke/pen/Pjoqqp */
+	filter: invert(80%) sepia(33%) saturate(5233%) hue-rotate(289deg) brightness(101%) contrast(105%);
+}
+
+.filter-accent-two{ 
+	/* filter of #6BB0BF made with https://codepen.io/sosuke/pen/Pjoqqp */
+	filter: invert(75%) sepia(19%) saturate(752%) hue-rotate(143deg) brightness(84%) contrast(89%);	
 }

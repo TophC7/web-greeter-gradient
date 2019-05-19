@@ -29,6 +29,7 @@ var default_user = function default_user() {
   }
   return 0;
 };
+
 var default_session = function default_session() {
   var last = cache.get('session');
   if (!last) return 0;
@@ -39,6 +40,7 @@ var default_session = function default_session() {
   }
   return 0;
 };
+
 var default_language = function default_language() {
   var last = cache.get('language');
   if (!last) return 0;
@@ -73,12 +75,14 @@ var switch_user = function switch_user(index) {
   cache.set('user', choosing.name);
   change_avatar('primary-' + (index % 4 + 1));
 };
+
 var switch_session = function switch_session(index) {
   now_session = index;
   var choosing = lightdm.sessions[index];
   $('.session .content').text(choosing.name);
   cache.set('session', choosing.name);
 };
+
 var switch_language = function switch_language(index) {
   now_language = index;
   var choosing = lightdm.languages[index];
@@ -94,9 +98,9 @@ var authentication_complete = function authentication_complete() {
     switch_user(now_user);
     change_avatar('password-' + ((password_failed_times ++) % 3 + 1));
     show_message('違います！');
-    $('.form').addClass('shake-anime');
+    $('.form').addClass('shake ');
     setTimeout(function () {
-      $('.form').removeClass('shake-anime');
+      $('.form').removeClass('shake ');
     }, 500);
   }
 };
